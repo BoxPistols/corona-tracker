@@ -1,0 +1,22 @@
+[
+  {
+    "Country": "Monaco",
+    "Slug": "monaco",
+    "ISO2": "MC"
+  },
+  {
+    "Country": "Japan",
+    "Slug": "japan",
+    "ISO2": "JP"
+  },
+  {
+    "Country": "Kyrgyzstan",
+    "Slug": "kyrgyzstan",
+    "ISO2": "KG"
+  },
+  {
+    "Country": "Malawi",
+    "Slug": "malawi",
+    "ISO2": "MW"
+  }
+]
