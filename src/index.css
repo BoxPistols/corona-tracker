@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   box-sizing: border-box;
   line-height: 1.5em;
@@ -11,10 +11,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 4vh 4vw;
-  color:gray;
+  color: gray;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Milligram */
+input, select, textarea {
+  color: gray;
+  font-size: 20px;
 }

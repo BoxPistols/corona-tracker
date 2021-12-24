@@ -7,9 +7,10 @@ export const Selector = () => {
             <h1>Selector</h1>
             <select>
                 {
-                    countriesApi.map((c) =>
-                        <option>
-                            {c.Country}
+                    countriesApi.map((country, index) =>
+                    // @see https://ja.reactjs.org/docs/lists-and-keys.html#keys
+                        <option key={country.Country}>
+                            {country.Country}
                         </option>
                     )
                 }
