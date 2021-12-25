@@ -6,11 +6,10 @@ import { Title } from "../components/Title";
 export const Top = () => {
     return (
         <div className="Top">
-            <h1>Top</h1>
-            <Header/>
-            <Title/>
-            <Selector/>
-            <Results/>
+            <Header />
+            <Title />
+            <Selector />
+            <Results />
         </div>
     );
 };
