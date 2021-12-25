@@ -1,7 +1,7 @@
 export const Title = () => {
     return (
         <div className="Title">
-            <h1>Title</h1>
+            <h1>Covid Tracker</h1>
         </div>
     );
 };

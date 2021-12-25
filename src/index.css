@@ -19,6 +19,33 @@ code {
     monospace;
 }
 
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+dl dt {
+  width: 35%;
+  padding: 20px;
+  background-color: #DADADA;
+  margin: 0 0 10px 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+dl dd {
+  width: 65%;
+  padding: 20px;
+  background-color: #F3F3F3;
+  margin: 0 0 10px 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
 /* Milligram */
 input, select, textarea {
   color: gray;
