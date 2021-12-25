@@ -2,6 +2,7 @@
 // import countriesApi from "../api/countries.json"
 
 export const Selector = (props) => {
+  console.log("Select", props)
   // console.log(countriesApi);
   // const [country, setCountry] = useState(countriesApi[0].Country)
 
