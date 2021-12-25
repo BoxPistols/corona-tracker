@@ -5,6 +5,12 @@ export const Selector = () => {
     // console.log(countriesApi);
     const [country, setCountry] = useState(countriesApi[0].Country)
 
+    const getCountryData = () => {
+        fetch("https://api.covid19api.com/country/japan")
+        .then(res=> res.json())
+        .then(data => console.log(data))
+    }
+
     return (
         <div className="">
             <h1>Selector</h1>
@@ -19,6 +25,8 @@ export const Selector = () => {
                 }
             </select>
             <p>{country}</p>
+            <button onClick={getCountryData}>Get Data</button>
         </div>
     )
+
 };
