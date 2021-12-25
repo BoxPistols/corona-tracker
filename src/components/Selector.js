@@ -1,30 +1,29 @@
-import { useState } from "react";
-import countriesApi from "../api/countries.json"
+// import { useState } from "react";
+// import countriesApi from "../api/countries.json"
 
-export const Selector = () => {
+export const Selector = (props) => {
   // console.log(countriesApi);
-  const [country, setCountry] = useState(countriesApi[0].Country)
+  // const [country, setCountry] = useState(countriesApi[0].Country)
 
-  const getCountryData = () => {
-    fetch(`https://api.covid19api.com/country/${country}`)
-      .then(res => res.json())
-      .then(data => console.log(data))
-  }
+  // const getCountryData = () => {
+  //   fetch(`https://api.covid19api.com/country/${country}`)
+  //     .then(res => res.json())
+  //     .then(data => console.log(data))
+  // }
 
   return (
-    <div className="">
-      <h2>Select Country</h2>
-      <select onChange={(e) => setCountry(e.target.value)}>
+    <div className="selector">
+      <select onChange={(e) => props.setCountry(e.target.value)}>
         <option>Select Country</option>
         {
-          countriesApi.map((country, index) =>
+          props.countriesApi.map((country, index) =>
             <option key={index} value={country.Slug}>
               {index}:{country.Country}
             </option>
           )
         }
       </select>
-      <button onClick={getCountryData}>Get Data</button>
+      <button onClick={props.getCountryData}>Get Data</button>
     </div>
   )
 };
