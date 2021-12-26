@@ -9,7 +9,7 @@ export const Top = (props) => {
             <Header />
             <Title />
             <Selector countriesApi={props.countriesApi} setCountry={props.setCountry} getCountryData={props.getCountryData} />
-            <Results />
+            <Results countryData={props.countryData} />
         </div>
     );
 };

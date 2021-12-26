@@ -28,7 +28,7 @@ function App() {
       // .then(data => { console.log(data[(newDay(data.length) - prevDay(data.length))].Confirmed) })
       .then(data => {
         setCountryData({
-          // dateGet: data[newDay(data.length)].Date,
+          dateGet: data[newDay(data.length)].Date,
           newConfirmed: data[newDay(data.length)].Confirmed - data[prevDay(data.length)].Confirmed,
           totalConfirmed: data[newDay(data.length)].Confirmed,
           newRecoverd: data[newDay(data.length)].Recovered - data[prevDay(data.length)].Recovered,
@@ -42,8 +42,8 @@ function App() {
 
   return (
     <div className="App">
-      {console.log(countryData)}
-      <Top countriesApi={countriesApi} setCountry={setCountry} getCountryData={getCountryData} />
+      {/* {console.log(countryData)} */}
+      <Top countriesApi={countriesApi} setCountry={setCountry} getCountryData={getCountryData} countryData={countryData} />
     </div>
   );
 }
