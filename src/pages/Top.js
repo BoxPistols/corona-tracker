@@ -4,7 +4,6 @@ import { Selector } from "../components/Selector";
 import { Title } from "../components/Title";
 
 export const Top = (props) => {
-    console.log("Top", props)
     return (
         <div className="Top">
             <Header />
