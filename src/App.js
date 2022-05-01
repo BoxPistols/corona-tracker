@@ -1,6 +1,9 @@
 import { useState } from "react"
 import countriesApi from "./api/countries.json"
 import { Top } from "./pages/Top"
+import { render } from "react-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Title } from "./components/Title"
 
 function App() {
   const [country, setCountry] = useState()
@@ -56,12 +59,29 @@ function App() {
   return (
     <div className="App">
       {/* {console.log(countryData)} */}
-      <Top
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Top
+                countriesApi={countriesApi}
+                setCountry={setCountry}
+                getCountryData={getCountryData}
+                countryData={countryData}
+              />
+            }
+          />
+          {/* TODO: Routing */}
+          <Route path="/hello" element={<Title />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <Top
         countriesApi={countriesApi}
         setCountry={setCountry}
         getCountryData={getCountryData}
         countryData={countryData}
-      />
+      /> */}
     </div>
   )
 }
