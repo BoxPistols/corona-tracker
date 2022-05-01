@@ -5,14 +5,21 @@ import { Top } from "./pages/Top"
 function App() {
   const [country, setCountry] = useState()
   /** 取得したいデータ：
-    * 日付
-    * 新規感染者
-    * 感染者総数
-    * 新規回復者
-    * 回復者総数
-    */
+   * 日付
+   * 新規感染者
+   * 感染者総数
+   * 新規回復者
+   * 回復者総数
+   */
   const [countryData, setCountryData] = useState({
-    dateGet: "", newConfirmed: "", totalConfirmed: "", newRecoverd: "", totalRecoverd: "", totalRecoverd: "", newDeaths: "", totalDeaths: ""
+    dateGet: "",
+    newConfirmed: "",
+    totalConfirmed: "",
+    newRecoverd: "",
+    totalRecoverd: "",
+    totalRecoverd: "",
+    newDeaths: "",
+    totalDeaths: "",
   })
 
   const getCountryData = () => {
@@ -24,16 +31,22 @@ function App() {
     }
 
     fetch(`https://api.covid19api.com/country/${country}`)
-      .then(res => res.json())
+      .then((res) => res.json())
       // .then(data => { console.log(data[(newDay(data.length) - prevDay(data.length))].Confirmed) })
-      .then(data => {
+      .then((data) => {
         setCountryData({
           dateGet: data[newDay(data.length)].Date,
-          newConfirmed: data[newDay(data.length)].Confirmed - data[prevDay(data.length)].Confirmed,
+          newConfirmed:
+            data[newDay(data.length)].Confirmed -
+            data[prevDay(data.length)].Confirmed,
           totalConfirmed: data[newDay(data.length)].Confirmed,
-          newRecoverd: data[newDay(data.length)].Recovered - data[prevDay(data.length)].Recovered,
+          newRecoverd:
+            data[newDay(data.length)].Recovered -
+            data[prevDay(data.length)].Recovered,
           totalRecoverd: data[newDay(data.length)].Recovered,
-          newDeaths: data[newDay(data.length)].Deaths - data[prevDay(data.length)].Deaths,
+          newDeaths:
+            data[newDay(data.length)].Deaths -
+            data[prevDay(data.length)].Deaths,
           totalDeaths: data[newDay(data.length)].Deaths,
         })
       })
@@ -43,12 +56,17 @@ function App() {
   return (
     <div className="App">
       {/* {console.log(countryData)} */}
-      <Top countriesApi={countriesApi} setCountry={setCountry} getCountryData={getCountryData} countryData={countryData} />
+      <Top
+        countriesApi={countriesApi}
+        setCountry={setCountry}
+        getCountryData={getCountryData}
+        countryData={countryData}
+      />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 
 /* データサンプル
 {

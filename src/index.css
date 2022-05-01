@@ -6,8 +6,7 @@
 
 body {
   margin: 0;
-  font-family: 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 4vh 4vw;
@@ -15,7 +14,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -28,7 +27,7 @@ dl {
 dl dt {
   width: 35%;
   padding: 20px;
-  background-color: #DADADA;
+  background-color: #dadada;
   margin: 0 0 10px 0;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -40,14 +39,16 @@ dl dt {
 dl dd {
   width: 65%;
   padding: 20px;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   margin: 0 0 10px 0;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 
 /* Milligram */
-input, select, textarea {
+input,
+select,
+textarea {
   color: gray;
   font-size: 20px;
 }

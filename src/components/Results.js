@@ -1,7 +1,7 @@
 export const Results = (props) => {
   console.log("Result", props)
   return (
-    < div className="Results" >
+    <div className="Results">
       <h1>Results</h1>
       <dl>
         <dt>日付：</dt>
@@ -20,6 +20,6 @@ export const Results = (props) => {
         <dd>{props.countryData.totalDeaths.toLocaleString()}</dd>
       </dl>
       <p>*一部正確でない数値もあります</p>
-    </div >
-  );
-};
+    </div>
+  )
+}

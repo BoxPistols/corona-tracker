@@ -1,4 +1,7 @@
 {
     "editor.tabSize": 2,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.accessibilitySupport": "off",
+    "prettier.semi": false,
+    "javascript.format.insertSpaceAfterSemicolonInForStatements": false
 }
