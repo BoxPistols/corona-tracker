@@ -74,6 +74,15 @@ function App() {
           />
           {/* TODO: Routing */}
           <Route path="/hello" element={<Title />} />
+          <Route
+            path="/world"
+            element={
+              <div>
+                <h2>world</h2>
+                <p>Report</p>
+              </div>
+            }
+          />
         </Routes>
       </BrowserRouter>
       {/* <Top
