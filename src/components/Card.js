@@ -1,20 +1,20 @@
 import { React, Fragment, useState } from "react"
 
-export default function Card() {
-  const [allCountriesData, setallCountriesData] = useState([])
+export default function Card(props) {
+  // const [allCountriesData, setallCountriesData] = useState([])
 
-  const getAllCountersData = () => {
-    fetch("https://api.covid19api.com/summary")
-      .then((res) => res.json())
-      .then((data) => {
-        setallCountriesData(data.Countries)
-      })
-  }
+  // const getAllCountersData = () => {
+  //   fetch("https://api.covid19api.com/summary")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setallCountriesData(data.Countries)
+  //     })
+  // }
   return (
     <div>
       <h2>Card</h2>
-      <button onClick={getAllCountersData}>Get All Data</button>
-      {allCountriesData.map((singleData) => (
+      <button onClick={props.getAllCountersData}>Get All Data</button>
+      {props.allCountriesData.map((singleData) => (
         <div
           className="d-flex"
           style={{

@@ -1,11 +1,14 @@
 import React from "react"
 import Card from "../components/Card"
 
-function WorldPage() {
+function WorldPage(props) {
   return (
     <div>
       WorldPage
-      <Card />
+      <Card
+        getAllCountersData={props.getAllCountersData}
+        allCountriesData={props.allCountriesData}
+      />
     </div>
   )
 }

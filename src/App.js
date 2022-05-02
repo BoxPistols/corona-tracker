@@ -8,6 +8,16 @@ import WorldPage from "./pages/WorldPage"
 
 function App() {
   const [country, setCountry] = useState()
+  // WorldPageに渡すデータを取得する関数
+  const [allCountriesData, setallCountriesData] = useState([])
+  const getAllCountersData = () => {
+    fetch("https://api.covid19api.com/summary")
+      .then((res) => res.json())
+      .then((data) => {
+        setallCountriesData(data.Countries)
+      })
+  }
+  // 国別のデータを取得する関数
   /** 取得したいデータ：
    * 日付
    * 新規感染者
@@ -74,8 +84,15 @@ function App() {
             }
           />
           {/* TODO: Routing */}
-          <Route path="/hello" element={<Title />} />
-          <Route path="/world" element={<WorldPage />} />
+          <Route
+            path="/world"
+            element={
+              <WorldPage
+                getAllCountersData={getAllCountersData}
+                allCountriesData={allCountriesData}
+              />
+            }
+          />
         </Routes>
       </BrowserRouter>
       {/* <Top
