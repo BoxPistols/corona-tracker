@@ -17,10 +17,13 @@ function App() {
       })
   }
 
-  // 日本のデータだけ取得
-  const japaneseData = allCountriesData.filter(
-    (country) => country.Country === "Japan"
-  )
+  // FIXME! 日本のデータだけ取得
+  // const japaneseData = allCountriesData.filter(
+  //   (country) => country.Country === "Japan"
+  // )
+  // console.log(japaneseData[0].Country)
+  // console.log(japaneseData[0].NewConfirmed)
+  // const JPNewConfirmed = japaneseData[0].NewConfirmed
 
   // 国別のデータを取得する関数
   /** 取得したいデータ：
@@ -94,7 +97,6 @@ function App() {
                 setCountry={setCountry}
                 getCountryData={getCountryData}
                 countryData={countryData}
-                japaneseData={japaneseData}
               />
             }
           />
@@ -105,6 +107,8 @@ function App() {
               <WorldPage
                 getAllCountersData={getAllCountersData}
                 allCountriesData={allCountriesData}
+                // japaneseData={japaneseData}
+                // JPNewConfirmed={JPNewConfirmed}
               />
             }
           />

@@ -1,23 +1,14 @@
 import { React, useState } from "react"
 
 export default function Card(props) {
-  // const [allCountriesData, setallCountriesData] = useState([])
-
-  // const getAllCountersData = () => {
-  //   fetch("https://api.covid19api.com/summary")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setallCountriesData(data.Countries)
-  //     })
-  // }
   return (
     <div>
       <h2>Card</h2>
-      <div class="container">
-        <div class="row" style={{ display: "flex", flexWrap: "wrap" }}>
+      <div className="container">
+        <div className="row" style={{ display: "flex", flexWrap: "wrap" }}>
           {props.allCountriesData.map((singleData) => (
             <div
-              class="column"
+              className="column"
               key={singleData.Country}
               style={{ width: "180px", margin: "10px" }}
             >
