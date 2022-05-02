@@ -4,6 +4,7 @@ import { Top } from "./pages/Top"
 import { render } from "react-dom"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Title } from "./components/Title"
+import WorldPage from "./pages/WorldPage"
 
 function App() {
   const [country, setCountry] = useState()
@@ -74,15 +75,7 @@ function App() {
           />
           {/* TODO: Routing */}
           <Route path="/hello" element={<Title />} />
-          <Route
-            path="/world"
-            element={
-              <div>
-                <h2>world</h2>
-                <p>Report</p>
-              </div>
-            }
-          />
+          <Route path="/world" element={<WorldPage />} />
         </Routes>
       </BrowserRouter>
       {/* <Top
