@@ -6,13 +6,22 @@
 
 body {
   margin: 0;
-  font-family: "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 4vh 4vw;
-  color: gray;
+  color: #345;
+  font-weight: 400;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 1em;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

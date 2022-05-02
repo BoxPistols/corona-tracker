@@ -16,6 +16,12 @@ function App() {
         setallCountriesData(data.Countries)
       })
   }
+
+  // 日本のデータだけ取得
+  const japaneseData = allCountriesData.filter(
+    (country) => country.Country === "Japan"
+  )
+
   // 国別のデータを取得する関数
   /** 取得したいデータ：
    * 日付
@@ -88,6 +94,7 @@ function App() {
                 setCountry={setCountry}
                 getCountryData={getCountryData}
                 countryData={countryData}
+                japaneseData={japaneseData}
               />
             }
           />

@@ -10,10 +10,10 @@ export const Results = (props) => {
         <dd>{props.countryData.newConfirmed.toLocaleString()}</dd>
         <dt>感染者総数：</dt>
         <dd>{props.countryData.totalConfirmed.toLocaleString()}</dd>
-        <dt>新規回復者：</dt>
+        {/* <dt>新規回復者：</dt>
         <dd>{props.countryData.newRecoverd.toLocaleString()}</dd>
         <dt>回復者総数：</dt>
-        <dd>{props.countryData.totalRecoverd.toLocaleString()}</dd>
+        <dd>{props.countryData.totalRecoverd.toLocaleString()}</dd> */}
         <dt>新規死者：</dt>
         <dd>{props.countryData.newDeaths.toLocaleString()}</dd>
         <dt>死者総数：</dt>
