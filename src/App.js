@@ -1,13 +1,12 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import countriesApi from "./api/countries.json"
 import { Top } from "./pages/Top"
-import { render } from "react-dom"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Title } from "./components/Title"
 import WorldPage from "./pages/WorldPage"
+import "./index.css"
 
 function App() {
-  const [country, setCountry] = useState()
+  const [country, setCountry] = useState("Japan")
   // WorldPageに渡すデータを取得する関数
   const [allCountriesData, setallCountriesData] = useState([])
   const getAllCountersData = () => {
@@ -67,6 +66,14 @@ function App() {
     // TODO: エラー対応
   }
 
+  useEffect(() => {
+    getAllCountersData()
+  }, [])
+
+  useEffect(() => {
+    setCountry("Japan")
+  }, [])
+
   return (
     <div className="App">
       {/* {console.log(countryData)} */}
@@ -76,6 +83,7 @@ function App() {
             path="/"
             element={
               <Top
+                defaultValue="Japan"
                 countriesApi={countriesApi}
                 setCountry={setCountry}
                 getCountryData={getCountryData}

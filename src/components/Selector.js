@@ -5,7 +5,7 @@ export const Selector = (props) => {
   return (
     <div className="selector">
       <select onChange={(e) => props.setCountry(e.target.value)}>
-        <option>Select Country</option>
+        <option value="Japan">日本</option>
         {props.countriesApi.map((country, index) => (
           <option key={index} value={country.Slug}>
             {country.Country}

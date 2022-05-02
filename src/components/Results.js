@@ -1,5 +1,5 @@
 export const Results = (props) => {
-  console.log("Result", props)
+  // console.log("Result", props)
   return (
     <div className="Results">
       <h1>Results</h1>
